@@ -26,13 +26,7 @@ public class CalendarDataPicker {
 		POMLogin.logInButton(driver);
 		POMEmployeeRegistration.PIM(driver);
 		POMEmployeeRegistration.EmployeeList(driver);
-		POMEmployeeRegistration.EmployeeSearch(driver);
-		POMEmployeeRegistration.EditButton(driver);
-		POMEmployeeRegistration.LicExpCalendarImage(driver);
-		POMEmployeeRegistration.LicExpCalendarMonth(driver);
-		POMEmployeeRegistration.LicExpCalendarYear(driver);
-		POMEmployeeRegistration.LicExpCalendarDate(driver);
-		POMEmployeeRegistration.SaveButton(driver);
+		
 
 	}
 

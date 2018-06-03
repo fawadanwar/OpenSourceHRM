@@ -97,44 +97,16 @@ public class POMEmployeeRegistration {
 		driver.quit();
 	}
 	
-	public static void EmployeeSearch (WebDriver driver) {
-		element = driver.findElement(By.xpath("//td/a[contains(text(),'0001')]"));
+	public static void SearchEmployeeID (WebDriver driver) {
+		element = driver.findElement(By.xpath("//a[contains(text(),'0001')]"));
 		element.click();
 	}
 	
-	public static void LicExpCalendarImage (WebDriver driver) {
-		element = driver.findElement(By.xpath("//input[@id='personal_txtLicExpDate']/following-sibling::img"));
+	public static void LicExpDate(WebDriver driver) {
+		element = driver.findElement(By.xpath("//input[@id='personal_txtLicExpDate']"));
 		element.click();
-	}
-	
-	public static void LicExpCalendarMonth (WebDriver driver) {
-		element = driver.findElement(By.xpath("//select[contains(@class,'ui-datepicker-month') and contains (@onchange,'#personal_txtLicExpDate')]"));
-		Select month = new Select (element);
-		month.selectByVisibleText("Jul");
-	}
-	
-	public static void LicExpCalendarYear (WebDriver driver) {
-		element = driver.findElement(By.xpath("//select[contains(@class,'ui-datepicker-year') and contains (@onchange,'#personal_txtLicExpDate')]"));
-		Select year = new Select (element);
-		year.selectByVisibleText("2019");	
-	}
-	
-	public static void LicExpCalendarDate (WebDriver driver) {
-		
-		List<WebElement> allDates=driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']//td"));
-		for(WebElement ele:allDates)
-		{		
-			String date=ele.getText();
-			if(date.equalsIgnoreCase("17"))
-			{
-				ele.click();
-				break;
-			}
-			
-		}
-		//table[@class='ui-datepicker-calendar']//td
-	}
-		
+		element.sendKeys("03-06-2018");
+	}	
 			
 		
 		
